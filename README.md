@@ -2,11 +2,8 @@ woody
 =====
 
 woody is html extractor. woody come from a  woodpecker what cartoon character of disney
------
 
 a simple sample:
-
-public class OsChinaBlog {
 
 	public static void main(String[] args) throws Exception {
 		Document doc = Jsoup.connect("http://www.oschina.net/news/43879/webmagic-0-3-0").timeout(60000)
@@ -57,4 +54,3 @@ public class OsChinaBlog {
 		public String weibo;
 
 	}
-}
