@@ -18,7 +18,9 @@ public abstract class Model {
 		super();
 	}
 
-	public abstract boolean isValid();
+	public boolean isValid() {
+		return true;
+	}
 
 	@SuppressWarnings("unchecked")
 	public static <T> T create(String json, Class<T> clazz) {

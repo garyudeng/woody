@@ -29,12 +29,7 @@ public class OsChinaBlog {
 	public static class OsChinaBlogModel extends Model {
 
 		public OsChinaBlogModel() {
-			super();
-		}
-
-		@Override
-		public boolean isValid() {
-			return true;
+			//use to reflect
 		}
 
 		@Inject
@@ -66,10 +61,10 @@ public class OsChinaBlog {
 				@ExtractBy(value = "div[id=userComments]", type = ExprType.CSS, setting = @Setting(outerHtml = true)),
 				@ExtractBy(value = "div.TextContent", type = ExprType.CSS) }, op = OP.AND, multi = true)
 		public List<String> commentContents;
-		
+
 		@Inject
-		@ExtractBy(value="div[id=toolbar_wrapper]", setting=@Setting(fliters={"b","span"}), type=ExprType.CSS, impl=Document.class)
-		public String t;
+		@ExtractBy(value = "div[id=toolbar_wrapper]", setting = @Setting(fliters = { "b", "span" }), type = ExprType.CSS, impl = Document.class)
+		public String weibo;
 
 	}
 }
